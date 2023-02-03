@@ -46,7 +46,10 @@ function App() {
           <Route
             path="/proyects"
             element={
-              <Proyects newBackgroundHeaderDark={newBackgroundHeaderDark} />
+              <Proyects
+                newBackgroundHeaderDark={newBackgroundHeaderDark}
+                newColorTextRed={newColorTextRed}
+              />
             }
           />
           <Route

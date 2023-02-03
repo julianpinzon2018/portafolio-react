@@ -74,7 +74,6 @@ const ProyectsStyled = styled.div`
     border-radius: 0.5rem 0.5rem 0 0;
   }
   .project-titl {
-    color: var(--purple);
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -147,7 +146,7 @@ const ProyectsStyled = styled.div`
   }
 `;
 
-function Proyects({ newBackgroundHeaderDark }) {
+function Proyects({ newBackgroundHeaderDark, newColorTextRed }) {
   return (
     <ProyectsStyled id="proyectos">
       <h1
@@ -173,7 +172,12 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Aplicación del clima"
             className="imageProyect"
           />
-          <p className="project-titl active-project-titl">
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            className="project-titl active-project-titl"
+          >
             Weather app JavaScript
           </p>
         </a>
@@ -191,7 +195,14 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Website copia de spotify"
             className="imageProyect"
           />
-          <p className="project-titl active-project-titl">Spotifu Css</p>
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            className="project-titl active-project-titl"
+          >
+            Spotifu Css
+          </p>
         </a>
 
         <a
@@ -207,7 +218,12 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Aplicación de calculadora"
             className="imageProyect"
           />
-          <p className="project-titl active-project-titl">
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            className="project-titl active-project-titl"
+          >
             JavaScript Calculator
           </p>
         </a>
@@ -225,7 +241,12 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Website copia de calendario de google"
             className="imageProyect"
           />
-          <p className="project-titl active-project-titl">
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            className="project-titl active-project-titl"
+          >
             Google calendar Css
           </p>
         </a>
@@ -242,7 +263,14 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Aplicación de pomodoro"
             className="imageProyect"
           />
-          <p class="project-titl active-project-titl">Pomodoro JavaScript</p>
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            class="project-titl active-project-titl"
+          >
+            Pomodoro JavaScript
+          </p>
         </a>
         <a
           href="https://peliculas-populares-main.vercel.app/"
@@ -257,7 +285,12 @@ function Proyects({ newBackgroundHeaderDark }) {
             alt="Aplicación de peliculas"
             className="imageProyect"
           />
-          <p className="project-titl active-project-titl">
+          <p
+            style={{
+              color: `${newColorTextRed}`,
+            }}
+            className="project-titl active-project-titl"
+          >
             Peliculas top JavaScript
           </p>
         </a>
