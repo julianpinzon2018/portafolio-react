@@ -8,6 +8,7 @@ const LayoutStyled = styled.main`
   grid-template-rows: 7vh auto auto auto 6vh;
   grid-template-areas: "header" "profile" "proyects" "social" "footer";
   overflow: hidden;
+  box-sizing: border-box;
 `;
 
 function Layout({ children, newBackgroundDark }) {

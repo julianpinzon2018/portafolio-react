@@ -5,8 +5,10 @@ const ProfileStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   block-size: 87vh;
+  box-sizing: border-box;
+  overflow: hidden;
 
   .contenPresentacion {
     display: flex;
