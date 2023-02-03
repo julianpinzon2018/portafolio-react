@@ -140,7 +140,7 @@ const ProyectsStyled = styled.div`
     }
     .project {
       width: 100%;
-      height: 100vw;
+      height: 80vw;
       padding-inline: 1rem;
       box-sizing: border-box;
     }
