@@ -48,9 +48,10 @@ const SocialStyled = styled.div`
     flex-direction: column;
     padding-block-end: 1rem;
     block-size: 100%;
+    inline-size: 40vw;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     ::-webkit-scrollbar {
       width: 5px;
       border-radius: 5px;
@@ -72,6 +73,9 @@ const SocialStyled = styled.div`
     .name-red {
       font-size: 1.5rem;
     }
+    .redes-caja {
+      inline-size: 60vw;
+    }
   }
   @media screen and (max-width: 768px) {
     .red-caja img {
@@ -86,6 +90,9 @@ const SocialStyled = styled.div`
     }
     .name-red {
       font-size: 1.1rem;
+    }
+    .redes-caja {
+      inline-size: 80vw;
     }
   }
 `;

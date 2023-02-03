@@ -24,7 +24,8 @@ const ButtonStyled = styled.div`
     grid-template-rows: 1fr;
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.5);
-    inline-size: 40rem;
+    inline-size: 100%;
+    block-size: 100%;
     overflow: hidden;
 
     border-radius: 0.5rem;
@@ -41,14 +42,14 @@ const ButtonStyled = styled.div`
   }
 
   @media screen and (max-width: 980px) {
-    .cajon-red {
+    /* .cajon-red {
       inline-size: 30rem;
-    }
+    } */
   }
   @media screen and (max-width: 768px) {
-    .cajon-red {
+    /* .cajon-red {
       inline-size: 18rem;
-    }
+    } */
 
     .name-red {
       font-size: 1rem;

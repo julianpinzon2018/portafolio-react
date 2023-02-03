@@ -12,7 +12,7 @@ const ProyectsStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   padding-inline: 1rem;
   padding-block: 2rem;
   block-size: 87vh;
@@ -28,15 +28,17 @@ const ProyectsStyled = styled.div`
   .proyectos-caja {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     gap: 4rem;
     width: 70%;
-    height: 70%;
-    max-width: 1920px;
-    max-height: 1080px;
+    height: 100%;
+    /* max-width: 1920px;
+    max-height: 1080px; */
     overflow-x: auto;
     overflow-y: hidden;
+    padding-block: 1rem;
+
     ::-webkit-scrollbar {
       height: 5px;
       border-radius: 5px;
@@ -52,7 +54,8 @@ const ProyectsStyled = styled.div`
     border-radius: 0.5rem;
     box-sizing: border-box;
     width: 350px;
-    height: 400px;
+    height: 100%;
+    overflow: hidden;
   }
   .project:hover {
     transition: 0.5s;
@@ -60,10 +63,13 @@ const ProyectsStyled = styled.div`
     z-index: 1;
   }
   .project img {
-    height: calc(100% - 5.8rem);
+    /* height: calc(100% - 5.8rem); */
+    height: 80%;
     width: 100%;
     object-fit: cover;
-    border-radius: 0.5rem;
+    box-sizing: border-box;
+
+    /* border-radius: 0.5rem; */
   }
   .project-titl {
     color: var(--purple);
@@ -73,9 +79,10 @@ const ProyectsStyled = styled.div`
     justify-content: center;
     background-color: var(--main-white);
     margin: 0;
-    padding-inline: 0.5rem;
-    padding-block: 2.2rem;
-    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 20%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .button-cv {
@@ -155,7 +162,7 @@ function Proyects({ newBackgroundHeaderDark }) {
         <a
           href="https://weather-app-ashy-omega-74.vercel.app/"
           target="blank"
-          class="project"
+          className="project"
           id="project-1"
         >
           <img
@@ -163,14 +170,17 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={weather}
             alt="Aplicación del clima"
+            className="imageProyect"
           />
-          <p class="project-titl active-project-titl">Weather app JavaScript</p>
+          <p className="project-titl active-project-titl">
+            Weather app JavaScript
+          </p>
         </a>
 
         <a
           href="https://julianpinzon2018.github.io/spotifu/"
           target="blank"
-          class="project"
+          className="project"
           id="project-2"
         >
           <img
@@ -178,14 +188,15 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={spotifu}
             alt="Website copia de spotify"
+            className="imageProyect"
           />
-          <p class="project-titl active-project-titl">Spotifu Css</p>
+          <p className="project-titl active-project-titl">Spotifu Css</p>
         </a>
 
         <a
           href="https://calculadora-two-lovat.vercel.app/"
           target="blank"
-          class="project"
+          className="project"
           id="project-3"
         >
           <img
@@ -193,14 +204,17 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={calculadora}
             alt="Aplicación de calculadora"
+            className="imageProyect"
           />
-          <p class="project-titl active-project-titl">JavaScript Calculator</p>
+          <p className="project-titl active-project-titl">
+            JavaScript Calculator
+          </p>
         </a>
 
         <a
           href="https://julianpinzon2018.github.io/Google-Calendar/"
           target="blank"
-          class="project"
+          className="project"
           id="project-4"
         >
           <img
@@ -208,13 +222,16 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={google}
             alt="Website copia de calendario de google"
+            className="imageProyect"
           />
-          <p class="project-titl active-project-titl">Google calendar Css</p>
+          <p className="project-titl active-project-titl">
+            Google calendar Css
+          </p>
         </a>
         <a
           href="https://pomodoro-main.vercel.app/"
           target="blank"
-          class="project"
+          className="project"
           id="project-5"
         >
           <img
@@ -222,13 +239,14 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={pomodoro}
             alt="Aplicación de pomodoro"
+            className="imageProyect"
           />
           <p class="project-titl active-project-titl">Pomodoro JavaScript</p>
         </a>
         <a
           href="https://peliculas-populares-main.vercel.app/"
           target="blank"
-          class="project"
+          className="project"
           id="project-6"
         >
           <img
@@ -236,8 +254,9 @@ function Proyects({ newBackgroundHeaderDark }) {
             height="48"
             src={peliculas}
             alt="Aplicación de peliculas"
+            className="imageProyect"
           />
-          <p class="project-titl active-project-titl">
+          <p className="project-titl active-project-titl">
             Peliculas top JavaScript
           </p>
         </a>
@@ -250,7 +269,7 @@ function Proyects({ newBackgroundHeaderDark }) {
           style={{
             background: `${newBackgroundHeaderDark}`,
           }}
-          class="button-cv active-button-cv"
+          className="button-cv active-button-cv"
           id="button"
         >
           C V >
