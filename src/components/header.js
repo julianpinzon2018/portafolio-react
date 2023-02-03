@@ -59,7 +59,7 @@ const HeaderStyled = styled.div`
     cursor: pointer;
   }
   #btn-switch:checked ~ .lblSwitch {
-    background: var(--dark);
+    background: var(--gradient);
   }
   #btn-switch:checked ~ .lblSwitch::after {
     left: 28px;
