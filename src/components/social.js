@@ -40,12 +40,26 @@ const SocialStyled = styled.div`
   }
 
   .redes-caja {
-    display: flex;
-    gap: 2rem;
-    margin: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
     justify-content: center;
     flex-direction: column;
     padding-block-end: 1rem;
+    block-size: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-inline: 2rem;
+    ::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: gray;
+
+      border-radius: 5px;
+    }
   }
   .name-red {
     font-size: 1.7rem;
@@ -70,17 +84,13 @@ const SocialStyled = styled.div`
     .redes-title {
       font-size: 1.7rem;
     }
-
-    .redes-caja {
-      gap: 2rem;
-    }
     .name-red {
       font-size: 1.1rem;
     }
   }
 `;
 
-function Social({ newBackgroundHeaderDark }) {
+function Social({ newBackgroundHeaderDark, newColorTextRed }) {
   return (
     <SocialStyled path="/social">
       <div className="redes-title-caja" id="redes-title-caja">
@@ -99,30 +109,35 @@ function Social({ newBackgroundHeaderDark }) {
       </div>
       <div class="redes-caja" id="redes-caja">
         <Button
+          newColorTextRed={newColorTextRed}
           name="Instagram"
           icon={<Instagram />}
           link="https://www.instagram.com/julianpinzon2018/"
           id="instagram-caja"
         />
         <Button
+          newColorTextRed={newColorTextRed}
           name="Github"
           link="https://github.com/julianpinzon2018"
           icon={<Github />}
           id="github-caja"
         ></Button>
         <Button
+          newColorTextRed={newColorTextRed}
           name="Twitter"
           link="https://twitter.com/julianp15812718"
           id="twitter-caja"
           icon={<Twitter />}
         ></Button>
         <Button
+          newColorTextRed={newColorTextRed}
           name="Gmail"
           link="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbSXNhsCVZHPTQJNmwzhWLgJqCXQpkKsBmppMgQBHSBJhFjclmXTPvCNFktdfTCSXXCFtC"
           id="email-caja"
           icon={<Gmail />}
         ></Button>
         <Button
+          newColorTextRed={newColorTextRed}
           name="Linkedin"
           link="https://www.linkedin.com/in/julian-pinz%C3%B3n-b29854237/"
           id="Linkedin-caja"

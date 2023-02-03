@@ -6,8 +6,8 @@ const TwitterStyled = styled.div`
   align-items: center;
   overflow: hidden;
   .loguito {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   @media screen and (max-width: 980px) {
     .loguito {

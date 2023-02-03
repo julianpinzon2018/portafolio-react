@@ -10,7 +10,7 @@ const HeaderStyled = styled.div`
   position: sticky;
   box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
   z-index: 2;
-  padding-inline: 1rem;
+  padding: 1rem;
   overflow: hidden;
 
   .contenIndices {
@@ -20,7 +20,7 @@ const HeaderStyled = styled.div`
   .indices {
     color: var(--white);
     background-color: transparent;
-    block-size: 3.2rem;
+    block-size: 100%;
     inline-size: 6.2rem;
     border-radius: 90px;
     border: none;
@@ -34,12 +34,15 @@ const HeaderStyled = styled.div`
     text-decoration: none;
   }
   .active {
-    background-color: var(--dark);
+    background-color: var(--main-white);
+    color: gray;
   }
   .indices:hover {
     transition: 0.5s;
     transform: scale(1.2);
-    background-color: var(--dark);
+    color: var(--main-white);
+
+    background-color: #aaa;
   }
   .boton {
     display: flex;
@@ -97,6 +100,8 @@ function Header({
   setColorBotones,
   newColorBotonesLetra,
   setColorBotonesLetra,
+  setColorTextRed,
+  newColorTextRed,
 }) {
   const handleClick = () => {
     newBackgroundDark ===
@@ -117,6 +122,10 @@ function Header({
     newColorBotonesLetra === "#fff"
       ? setColorBotonesLetra("#310a90")
       : setColorBotonesLetra("#fff");
+
+    newColorTextRed === "#310a90"
+      ? setColorTextRed("#081b33")
+      : setColorTextRed("#310a90");
   };
 
   return (

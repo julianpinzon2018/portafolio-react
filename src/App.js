@@ -12,6 +12,8 @@ function App() {
   const backgroundHeaderDark = "#FF8906";
   const colorBotones = "#FF8906";
   const colorBotonesLetra = "#fff";
+  const colorTextRed = "#081b33";
+  const [newColorTextRed, setColorTextRed] = useState(colorTextRed);
   const [newColorBotonesLetra, setColorBotonesLetra] =
     useState(colorBotonesLetra);
   const [newBackgroundDark, setColor] = useState(backgroundDark);
@@ -31,15 +33,14 @@ function App() {
           setColorBotones={setColorBotones}
           newColorBotonesLetra={newColorBotonesLetra}
           setColorBotonesLetra={setColorBotonesLetra}
+          setColorTextRed={setColorTextRed}
+          newColorTextRed={newColorTextRed}
         />
         <Routes>
           <Route
             path="/"
             element={
-              <Profile
-                setBackgroundHeaderDark={setBackgroundHeaderDark}
-                newBackgroundHeaderDark={newBackgroundHeaderDark}
-              />
+              <Profile newBackgroundHeaderDark={newBackgroundHeaderDark} />
             }
           />
           <Route
@@ -51,7 +52,10 @@ function App() {
           <Route
             path="/social"
             element={
-              <Social newBackgroundHeaderDark={newBackgroundHeaderDark} />
+              <Social
+                newBackgroundHeaderDark={newBackgroundHeaderDark}
+                newColorTextRed={newColorTextRed}
+              />
             }
           />
         </Routes>
