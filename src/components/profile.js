@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import fotoProfile from "../images/foto1.jpg";
 
 const ProfileStyled = styled.div`
   grid-area: profile;
@@ -83,7 +84,7 @@ function Profile({ newBackgroundHeaderDark }) {
         </div>
         <img
           className="foto"
-          src="https://pbs.twimg.com/profile_images/1610510980357709825/aztwXRo4_400x400.jpg"
+          src={fotoProfile}
           width="378"
           height="378"
           alt=""
