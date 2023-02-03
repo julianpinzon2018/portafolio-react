@@ -12,38 +12,7 @@ const HeaderStyled = styled.div`
   z-index: 2;
   padding-inline: 1rem;
   overflow: hidden;
-  .burn {
-    color: var(--white);
-    background: var(--dark);
-    border: none;
-    font-size: 1rem;
-    line-height: 0;
-    border-radius: 50%;
-    font-weight: bold;
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    outline: 0;
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5),
-      -5px -5px 10px 0 rgba(255, 255, 255, 0.3);
-    position: relative;
-  }
-  .burn:before {
-    border: 2px solid white;
-    content: "";
-    background-color: var(--dark);
-    z-index: -1;
-    position: absolute;
-    left: -7px;
-    top: -7px;
-    bottom: -7px;
-    right: -7px;
-    border-radius: 50%;
-  }
-  .burn:active {
-    box-shadow: inset 10px 10px 10px 0 rgba(0, 0, 0, 0.5),
-      inset -10px -10px 10px 0 rgba(255, 255, 255, 0.3);
-  }
+
   .contenIndices {
     display: flex;
     gap: 1rem;
@@ -72,25 +41,41 @@ const HeaderStyled = styled.div`
     transform: scale(1.2);
     background-color: var(--dark);
   }
+  .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lblSwitch {
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background: #aaa;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+  }
+  #btn-switch:checked ~ .lblSwitch {
+    background: var(--dark);
+  }
+  #btn-switch:checked ~ .lblSwitch::after {
+    left: 28px;
+  }
+  .lblSwitch::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+  }
+  #btn-switch {
+    display: none;
+  }
   @media screen and (max-width: 768px) {
-    .burn {
-      font-size: 0.5rem;
-      width: 1rem;
-      height: 1rem;
-      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5),
-        -5px -5px 10px 0 rgba(255, 255, 255, 0.3);
-    }
-    .burn:before {
-      border: 1.5px solid;
-      left: -5px;
-      top: -5px;
-      bottom: -5px;
-      right: -5px;
-    }
-    .burn:active {
-      box-shadow: inset 5px 5px 5px 0 rgba(0, 0, 0, 0.5),
-        inset -5px -5px 5px 0 rgba(255, 255, 255, 0.3);
-    }
     .contenIndices {
       display: flex;
       gap: 0.2rem;
@@ -141,7 +126,10 @@ function Header({
         color: `${newColorBotonesLetra}`,
       }}
     >
-      <button className="burn" id="burn" onClick={handleClick} />
+      <div className="boton">
+        <input type="checkbox" id="btn-switch" onClick={handleClick} />
+        <label for="btn-switch" className="lblSwitch"></label>
+      </div>
       <nav className="contenIndices">
         <NavLink exact to="/" activeClassName="active" className="indices">
           About

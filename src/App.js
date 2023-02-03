@@ -8,10 +8,9 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  const backgroundDark =
-    "radial-gradient( 41.48% 11.48% at 2.38% 8.52%, #747de9 0%, rgba(255, 255, 255, 0) 100% ), linear-gradient(135deg, #72edf2 0%, #5151e5 100%)";
-  const backgroundHeaderDark = "#310a90";
-  const colorBotones = "#00aef7";
+  const backgroundDark = "#081b33";
+  const backgroundHeaderDark = "#FF8906";
+  const colorBotones = "#FF8906";
   const colorBotonesLetra = "#fff";
   const [newColorBotonesLetra, setColorBotonesLetra] =
     useState(colorBotonesLetra);

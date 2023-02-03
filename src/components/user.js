@@ -26,7 +26,7 @@ const ButtonStyled = styled.div`
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
     inline-size: 40rem;
-    block-size: 3.5rem;
+    max-block-size: auto;
 
     border-radius: 0.5rem;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
@@ -44,7 +44,7 @@ const ButtonStyled = styled.div`
   @media screen and (max-width: 980px) {
     .cajon-red {
       inline-size: 30rem;
-      block-size: 2.5rem;
+      /* block-size: 2.5rem; */
     }
     .redes-caja {
       gap: 1rem;
@@ -53,7 +53,7 @@ const ButtonStyled = styled.div`
   @media screen and (max-width: 768px) {
     .cajon-red {
       inline-size: 18rem;
-      block-size: 1.5rem;
+      /* block-size: 1.5rem; */
     }
 
     .name-red {
