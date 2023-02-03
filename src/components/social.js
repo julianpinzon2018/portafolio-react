@@ -8,11 +8,13 @@ import Button from "./user";
 
 const SocialStyled = styled.div`
   grid-area: social;
+
   display: grid;
   align-items: center;
   justify-content: center;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-block: 1rem;
+
   overflow: hidden;
   block-size: 87vh;
   box-sizing: border-box;
