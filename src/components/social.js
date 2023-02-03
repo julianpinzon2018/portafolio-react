@@ -12,7 +12,7 @@ const SocialStyled = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   padding-block: 1rem;
 
   overflow: hidden;
