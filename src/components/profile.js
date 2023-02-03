@@ -7,6 +7,8 @@ const ProfileStyled = styled.div`
   justify-content: center;
   padding-inline: 1rem;
   block-size: 87vh;
+  box-sizing: border-box;
+  overflow: hidden;
 
   .contenPresentacion {
     display: flex;

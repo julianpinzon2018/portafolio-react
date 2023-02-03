@@ -18,6 +18,7 @@ const SocialStyled = styled.div`
   overflow: hidden;
   block-size: 87vh;
   box-sizing: border-box;
+  overflow: hidden;
 
   .redes-title-caja {
     display: flex;
