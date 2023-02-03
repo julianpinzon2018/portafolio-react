@@ -1,0 +1,25 @@
+import styled from "styled-components";
+
+const LayoutStyled = styled.main`
+  display: grid;
+  min-block-size: 100vh;
+  max-inline-size: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 7vh auto auto auto 6vh;
+  grid-template-areas: "header" "profile" "proyects" "social" "footer";
+  overflow: hidden;
+`;
+
+function Layout({ children, newBackgroundDark }) {
+  return (
+    <LayoutStyled
+      style={{
+        background: `${newBackgroundDark}`,
+      }}
+    >
+      {children}
+    </LayoutStyled>
+  );
+}
+
+export default Layout;
