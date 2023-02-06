@@ -95,7 +95,7 @@ const SkillsStyled = styled.div`
     gap: 2rem;
     .titleSkills {
       font-size: 2rem;
-      margin-top: -200px;
+      margin-top: -100px;
       margin-bottom: 30px;
     }
     .skillsContainertLogos {
