@@ -5,8 +5,8 @@ const LayoutStyled = styled.main`
   min-block-size: 100vh;
   max-inline-size: 100%;
   grid-template-columns: 100%;
-  grid-template-rows: 7vh auto auto auto 6vh;
-  grid-template-areas: "header" "profile" "proyects" "social" "footer";
+  grid-template-rows: 7vh auto auto auto auto 6vh;
+  grid-template-areas: "header" "profile" 'skills' "proyects" "social" "footer";
   overflow: hidden;
   box-sizing: border-box;
 `;

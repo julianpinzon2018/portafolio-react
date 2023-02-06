@@ -23,7 +23,7 @@ const ButtonStyled = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--main-white);
     inline-size: 100%;
     block-size: 100%;
     overflow: hidden;

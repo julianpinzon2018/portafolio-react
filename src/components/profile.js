@@ -6,7 +6,7 @@ const ProfileStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 1rem;
+  padding: 1rem;
   block-size: 87vh;
   box-sizing: border-box;
   overflow: hidden;
@@ -23,10 +23,7 @@ const ProfileStyled = styled.div`
     justify-content: center;
     align-items: center;
   }
-  .foto {
-    border-radius: 50%;
-    overflow: hidden;
-  }
+
   .saludoName {
     font-size: 4rem;
     margin: 0;
@@ -34,6 +31,30 @@ const ProfileStyled = styled.div`
   .saludoOficio {
     color: var(--white);
     font-size: 2.8rem;
+  }
+  .containerFoto {
+    border: 5px var(--main-white) solid;
+    box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+      transform: translatey(0px);
+    }
   }
   @media screen and (max-width: 980px) {
     .contenPresentacion {
@@ -80,15 +101,18 @@ function Profile({ newBackgroundHeaderDark }) {
           >
             Hey I am Julian
           </h1>
+
           <h2 className="saludoOficio">a web developer</h2>
         </div>
-        <img
-          className="foto"
-          src={fotoProfile}
-          width="378"
-          height="378"
-          alt=""
-        />
+        <div className="containerFoto">
+          <img
+            className="foto"
+            src={fotoProfile}
+            width="378"
+            height="378"
+            alt=""
+          />
+        </div>
       </div>
     </ProfileStyled>
   );

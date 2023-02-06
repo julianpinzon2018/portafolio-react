@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Social from "./components/social";
 import Header from "./components/header";
 import Profile from "./components/profile";
+import Skills from "./components/skills";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -43,6 +44,7 @@ function App() {
               <Profile newBackgroundHeaderDark={newBackgroundHeaderDark} />
             }
           />
+
           <Route
             path="/proyects"
             element={
@@ -52,6 +54,17 @@ function App() {
               />
             }
           />
+
+          <Route
+            path="/skills"
+            element={
+              <Skills
+                newBackgroundHeaderDark={newBackgroundHeaderDark}
+                newColorTextRed={newColorTextRed}
+              />
+            }
+          />
+
           <Route
             path="/social"
             element={

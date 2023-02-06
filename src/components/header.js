@@ -143,6 +143,16 @@ function Header({
         <NavLink exact to="/" activeClassName="active" className="indices">
           About
         </NavLink>
+
+        <NavLink
+          exact
+          to="/skills"
+          activeClassName="active"
+          className="indices"
+        >
+          Skills
+        </NavLink>
+
         <NavLink
           exact
           to="/proyects"
