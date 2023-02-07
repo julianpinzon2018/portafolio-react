@@ -110,7 +110,7 @@ const HeaderStyled = styled.div`
     .indices {
       block-size: 2.2rem;
       inline-size: 4.2rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding: 0.3em 0;
     }
   }
