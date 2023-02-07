@@ -12,38 +12,6 @@ const HeaderStyled = styled.div`
   z-index: 2;
   padding: 1rem;
   overflow: hidden;
-
-  .contenIndices {
-    display: flex;
-    gap: 1rem;
-  }
-  .indices {
-    color: var(--white);
-    background-color: transparent;
-    block-size: 100%;
-    inline-size: 6.2rem;
-    border-radius: 90px;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3rem;
-
-    text-decoration: none;
-  }
-  .active {
-    background-color: var(--main-white);
-    color: gray;
-  }
-  .indices:hover {
-    transition: 0.5s;
-    transform: scale(1.2);
-    color: var(--main-white);
-
-    background-color: #aaa;
-  }
   .boton {
     display: flex;
     align-items: center;
@@ -78,6 +46,62 @@ const HeaderStyled = styled.div`
   #btn-switch {
     display: none;
   }
+
+  .contenIndices {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .contenIndices * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
+  .indices {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5rem;
+    padding: 0;
+
+    padding: 0.3em;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+  }
+  .active {
+    color: #ffffff;
+  }
+
+  .contenIndices .indices:before,
+  .contenIndices .indices:after {
+    height: 3px;
+    position: absolute;
+    content: "";
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: var(--main-white);
+    width: 0;
+  }
+
+  .contenIndices .indices:before {
+    top: 0;
+    left: 0;
+  }
+  .contenIndices .indices:after {
+    bottom: 0;
+    right: 0;
+  }
+  .contenIndices .indices:hover {
+    color: #ffffff;
+  }
+  .contenIndices .indices:hover:before,
+  .contenIndices .active::before,
+  .contenIndices .indices:hover:after,
+  .contenIndices .active::after {
+    width: 100%;
+  }
+
   @media screen and (max-width: 768px) {
     .contenIndices {
       display: flex;
@@ -96,8 +120,7 @@ function Header({
   newBackgroundDark,
   setBackgroundHeaderDark,
   newBackgroundHeaderDark,
-  newColorBotones,
-  setColorBotones,
+
   newColorBotonesLetra,
   setColorBotonesLetra,
   setColorTextRed,
@@ -114,10 +137,6 @@ function Header({
     newBackgroundHeaderDark === "#310a90"
       ? setBackgroundHeaderDark("#FF8906")
       : setBackgroundHeaderDark("#310a90");
-
-    newColorBotones === "#00aef7"
-      ? setColorBotones("#FF8906")
-      : setColorBotones("#00aef7");
 
     newColorBotonesLetra === "#fff"
       ? setColorBotonesLetra("#310a90")
@@ -140,7 +159,7 @@ function Header({
         <label for="btn-switch" className="lblSwitch"></label>
       </div>
       <nav className="contenIndices">
-        <NavLink exact to="/" activeClassName="active" className="indices">
+        <NavLink exact to="/" activeClassName="active" className="indices ">
           About
         </NavLink>
 
@@ -161,6 +180,7 @@ function Header({
         >
           Work
         </NavLink>
+
         <NavLink
           exact
           to="/social"
