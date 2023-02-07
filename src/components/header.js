@@ -61,8 +61,7 @@ const HeaderStyled = styled.div`
   .indices {
     display: inline-block;
     list-style: outside none none;
-    margin: 0.5rem;
-    padding: 0;
+    margin: 0.1rem;
 
     padding: 0.3em;
     color: rgba(255, 255, 255, 0.5);
