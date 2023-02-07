@@ -111,7 +111,7 @@ const HeaderStyled = styled.div`
     .indices {
       font-size: 1rem;
       padding: 0.3em 0;
-      margin: 0.1rem;
+      margin: 0.3rem;
     }
   }
 `;

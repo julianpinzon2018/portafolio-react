@@ -13,16 +13,39 @@ const SkillsStyled = styled.div`
   padding: 1rem;
   block-size: 87vh;
   box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   flex-direction: column;
   gap: 5rem;
+  padding-block: 2rem;
 
   .titleSkills {
     font-size: 3rem;
     margin: 0;
-    margin-top: -50px;
     border-bottom: 0.2rem solid var(--main-white);
+  }
+
+  .cajonOverflowSkills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* block-size: 100%; */
+    inline-size: 80vw;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    ::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: gray;
+
+      border-radius: 5px;
+    }
   }
   .skillsContainertLogos {
     display: grid;
@@ -95,7 +118,6 @@ const SkillsStyled = styled.div`
     gap: 2rem;
     .titleSkills {
       font-size: 2rem;
-      margin-top: -100px;
       margin-bottom: 30px;
     }
     .skillsContainertLogos {
@@ -116,6 +138,9 @@ const SkillsStyled = styled.div`
     .logoSkillsTitle {
       font-size: 1rem;
     }
+    .cajonOverflowSkills {
+      gap: 2rem;
+    }
   }
 `;
 
@@ -130,65 +155,67 @@ function Skills({ newBackgroundHeaderDark, newColorTextRed }) {
       >
         Skills
       </h1>
-      <div className="skillsContainertLogos">
-        <div className="logoSkills">
-          <img className="imgskill" src={html} alt="" />
-          <p
-            style={{
-              color: `${newColorTextRed}`,
-            }}
-            className="logoSkillsTitle"
-          >
-            HTML
-          </p>
-        </div>
+      <div className="cajonOverflowSkills">
+        <div className="skillsContainertLogos">
+          <div className="logoSkills">
+            <img className="imgskill" src={html} alt="" />
+            <p
+              style={{
+                color: `${newColorTextRed}`,
+              }}
+              className="logoSkillsTitle"
+            >
+              HTML
+            </p>
+          </div>
 
-        <div className="logoSkills">
-          <img className="imgskill" src={css} alt="" />
-          <p
-            style={{
-              color: `${newColorTextRed}`,
-            }}
-            className="logoSkillsTitle"
-          >
-            CSS
-          </p>
-        </div>
+          <div className="logoSkills">
+            <img className="imgskill" src={css} alt="" />
+            <p
+              style={{
+                color: `${newColorTextRed}`,
+              }}
+              className="logoSkillsTitle"
+            >
+              CSS
+            </p>
+          </div>
 
-        <div className="logoSkills">
-          <img className="imgskill" src={js} alt="" />
-          <p
-            style={{
-              color: `${newColorTextRed}`,
-            }}
-            className="logoSkillsTitle"
-          >
-            JavaScript
-          </p>
+          <div className="logoSkills">
+            <img className="imgskill" src={js} alt="" />
+            <p
+              style={{
+                color: `${newColorTextRed}`,
+              }}
+              className="logoSkillsTitle"
+            >
+              JavaScript
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="skillsContainertLogos2">
-        <div className="logoSkills">
-          <img className="imgskill" src={react} alt="" />
-          <p
-            style={{
-              color: `${newColorTextRed}`,
-            }}
-            className="logoSkillsTitle"
-          >
-            React
-          </p>
-        </div>
-        <div className="logoSkills">
-          <img className="imgskill" src={git} alt="" />
-          <p
-            style={{
-              color: `${newColorTextRed}`,
-            }}
-            className="logoSkillsTitle"
-          >
-            Git
-          </p>
+        <div className="skillsContainertLogos2">
+          <div className="logoSkills">
+            <img className="imgskill" src={react} alt="" />
+            <p
+              style={{
+                color: `${newColorTextRed}`,
+              }}
+              className="logoSkillsTitle"
+            >
+              React
+            </p>
+          </div>
+          <div className="logoSkills">
+            <img className="imgskill" src={git} alt="" />
+            <p
+              style={{
+                color: `${newColorTextRed}`,
+              }}
+              className="logoSkillsTitle"
+            >
+              Git
+            </p>
+          </div>
         </div>
       </div>
     </SkillsStyled>
