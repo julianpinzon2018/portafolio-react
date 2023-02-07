@@ -61,12 +61,13 @@ const HeaderStyled = styled.div`
   .indices {
     display: inline-block;
     list-style: outside none none;
-    margin: 0.1rem;
+    margin: 1rem;
 
     padding: 0.3em 0.3em;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
     text-decoration: none;
+    font-size: 1.2rem;
   }
   .active {
     color: #ffffff;
@@ -108,10 +109,9 @@ const HeaderStyled = styled.div`
     }
 
     .indices {
-      block-size: 2.2rem;
-      inline-size: 4.2rem;
       font-size: 1rem;
       padding: 0.3em 0;
+      margin: 0.1rem;
     }
   }
 `;
