@@ -35,7 +35,7 @@ const SkillsStyled = styled.div`
 
     /* block-size: 100%; */
     inline-size: 80vw;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
     padding-block: 2rem;
     ::-webkit-scrollbar {
       width: 5px;
