@@ -10,11 +10,10 @@ const ProyectsStyled = styled.div`
   grid-area: proyects;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  padding-inline: 1rem;
-  padding-block: 2rem;
+  gap: 1rem;
+  padding: 1rem;
   block-size: 87vh;
   box-sizing: border-box;
   overflow: hidden;
@@ -32,9 +31,7 @@ const ProyectsStyled = styled.div`
     grid-template-rows: 1fr;
     gap: 4rem;
     width: 70%;
-    height: 100%;
-    /* max-width: 1920px;
-    max-height: 1080px; */
+    height: 70%;
     overflow-x: auto;
     overflow-y: hidden;
     padding-block: 1rem;
@@ -54,7 +51,7 @@ const ProyectsStyled = styled.div`
     border-radius: 0.5rem;
     box-sizing: border-box;
     width: 350px;
-    height: 100%;
+    height: 90%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -65,7 +62,6 @@ const ProyectsStyled = styled.div`
     z-index: 1;
   }
   .project img {
-    /* height: calc(100% - 5.8rem); */
     height: 80%;
     width: 100%;
     object-fit: cover;
@@ -148,17 +144,17 @@ const ProyectsStyled = styled.div`
 
 function Proyects({ newBackgroundHeaderDark, newColorTextRed }) {
   return (
-    <ProyectsStyled id="proyectos">
+    <ProyectsStyled>
       <h1
         style={{
           color: `${newBackgroundHeaderDark}`,
         }}
-        class="proyectos-title active-proyectos-title"
+        className="proyectos-title active-proyectos-title"
         id="proyectos-title"
       >
         These are some of my projects
       </h1>
-      <div class="proyectos-caja" id="proyectos-caja">
+      <div className="proyectos-caja" id="proyectos-caja">
         <a
           href="https://weather-app-ashy-omega-74.vercel.app/"
           target="blank"
@@ -267,7 +263,7 @@ function Proyects({ newBackgroundHeaderDark, newColorTextRed }) {
             style={{
               color: `${newColorTextRed}`,
             }}
-            class="project-titl active-project-titl"
+            className="project-titl active-project-titl"
           >
             Pomodoro JavaScript
           </p>

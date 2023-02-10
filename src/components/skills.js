@@ -9,14 +9,13 @@ const SkillsStyled = styled.div`
   grid-area: skills;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1rem;
   block-size: 87vh;
   box-sizing: border-box;
   overflow: hidden;
   flex-direction: column;
-  gap: 5rem;
-  padding-block: 2rem;
+  gap: 1rem;
 
   .titleSkills {
     font-size: 3rem;
@@ -33,8 +32,8 @@ const SkillsStyled = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     inline-size: 80vw;
-    padding-inline: 2rem;
-    padding-block: 2rem;
+    block-size: 100%;
+    padding: 2rem;
     ::-webkit-scrollbar {
       width: 5px;
       border-radius: 5px;
@@ -59,8 +58,8 @@ const SkillsStyled = styled.div`
   }
 
   .logoSkills {
-    inline-size: 168px;
-    block-size: 168px;
+    inline-size: 158px;
+    block-size: 158px;
     background: var(--main-white);
     border-radius: 0.5rem;
     display: flex;
@@ -112,6 +111,12 @@ const SkillsStyled = styled.div`
     width: 98px;
     height: 98px;
   }
+  @media screen and (max-width: 920px) {
+    .logoSkills {
+      inline-size: 148px;
+      block-size: 148px;
+    }
+  }
   @media screen and (max-width: 780px) {
     gap: 2rem;
     .titleSkills {
@@ -144,7 +149,7 @@ const SkillsStyled = styled.div`
 
 function Skills({ newBackgroundHeaderDark, newColorTextRed }) {
   return (
-    <SkillsStyled id="skills">
+    <SkillsStyled>
       <h1
         style={{
           color: `${newBackgroundHeaderDark}`,

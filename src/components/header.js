@@ -160,37 +160,22 @@ function Header({
     >
       <div className="boton">
         <input type="checkbox" id="btn-switch" onClick={handleClick} />
-        <label for="btn-switch" className="lblSwitch"></label>
+        <label htmlFor="btn-switch" className="lblSwitch"></label>
       </div>
       <nav className="contenIndices">
-        <NavLink exact to="/" activeClassName="active" className="indices ">
+        <NavLink to="/" activeclassname="active" className="indices ">
           About
         </NavLink>
 
-        <NavLink
-          exact
-          to="/skills"
-          activeClassName="active"
-          className="indices"
-        >
+        <NavLink to="/skills" activeclassname="active" className="indices">
           Skills
         </NavLink>
 
-        <NavLink
-          exact
-          to="/proyects"
-          activeClassName="active"
-          className="indices"
-        >
+        <NavLink to="/proyects" activeclassname="active" className="indices">
           Work
         </NavLink>
 
-        <NavLink
-          exact
-          to="/social"
-          activeClassName="active"
-          className="indices"
-        >
+        <NavLink to="/social" activeclassname="active" className="indices">
           Contact
         </NavLink>
       </nav>

@@ -1,13 +1,20 @@
-import { setIn } from "formik";
 import styled from "styled-components";
 
 const CorreoStyled = styled.div`
   height: 300px;
+  width: 450px;
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 
   .letter-image {
     position: absolute;
+
     top: 50%;
     left: 50%;
+
     width: 200px;
     height: 200px;
     -webkit-transform: translate(-50%, -50%);
@@ -180,22 +187,22 @@ function Correo({ setModal }) {
   }
   return (
     <CorreoStyled onClick={handleClick}>
-      <div class="letter-image">
-        <div class="animated-mail">
-          <div class="back-fold"></div>
-          <div class="letter">
-            <div class="letter-border"></div>
-            <div class="letter-title"></div>
-            <div class="letter-context"></div>
-            <div class="letter-stamp">
-              <div class="letter-stamp-inner"></div>
+      <div className="letter-image">
+        <div className="animated-mail">
+          <div className="back-fold"></div>
+          <div className="letter">
+            <div className="letter-border"></div>
+            <div className="letter-title"></div>
+            <div className="letter-context"></div>
+            <div className="letter-stamp">
+              <div className="letter-stamp-inner"></div>
             </div>
           </div>
-          <div class="top-fold"></div>
-          <div class="body"></div>
-          <div class="left-fold"></div>
+          <div className="top-fold"></div>
+          <div className="body"></div>
+          <div className="left-fold"></div>
         </div>
-        <div class="shadow"></div>
+        <div className="shadow"></div>
       </div>
     </CorreoStyled>
   );

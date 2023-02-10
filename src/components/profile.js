@@ -3,6 +3,7 @@ import fotoProfile from "../images/foto1.jpg";
 
 const ProfileStyled = styled.div`
   grid-area: profile;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,15 +14,17 @@ const ProfileStyled = styled.div`
 
   .contenPresentacion {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 8rem;
+    inline-size: 70%;
+    gap: 1rem;
   }
   .presentacion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
   }
 
   .saludoName {
@@ -31,6 +34,7 @@ const ProfileStyled = styled.div`
   .saludoOficio {
     color: var(--white);
     font-size: 2.8rem;
+    margin: 0;
   }
   .containerFoto {
     border: 5px var(--main-white) solid;
@@ -58,7 +62,9 @@ const ProfileStyled = styled.div`
   }
   @media screen and (max-width: 980px) {
     .contenPresentacion {
-      gap: 2rem;
+      justify-content: space-evenly;
+      align-items: center;
+      inline-size: 100%;
     }
     .saludoName {
       font-size: 3rem;
@@ -71,6 +77,7 @@ const ProfileStyled = styled.div`
   @media screen and (max-width: 768px) {
     .contenPresentacion {
       flex-direction: column-reverse;
+      block-size: 90%;
     }
     .foto {
       width: 278px;
@@ -90,7 +97,7 @@ const ProfileStyled = styled.div`
 
 function Profile({ newBackgroundHeaderDark }) {
   return (
-    <ProfileStyled id="profile">
+    <ProfileStyled>
       <div className="contenPresentacion">
         <div className="presentacion">
           <h1

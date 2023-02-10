@@ -104,7 +104,7 @@ const Form = ({ setModal }) => {
             },
           });
 
-          if (response.ok === true) {
+          if (response.ok) {
             const formulario = document.getElementById("formu");
             formulario.reset();
             setModal(false);

@@ -43,12 +43,12 @@ function SaludoRedes({ newBackgroundHeaderDark }) {
           style={{
             color: `${newBackgroundHeaderDark}`,
           }}
-          class="redes-title active-redes-title"
+          className="redes-title active-redes-title"
           id="redes-title"
         >
           Let's work together...
         </h2>
-        <p class="redes-title-text " id="redes-title-text">
+        <p className="redes-title-text " id="redes-title-text">
           How do you take your coffee?
         </p>
       </div>

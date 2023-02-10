@@ -5,24 +5,45 @@ import Correo from "./correo";
 
 const SocialStyled = styled.div`
   grid-area: social;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   padding: 1rem;
-  overflow: hidden;
   block-size: 87vh;
   box-sizing: border-box;
   gap: 1rem;
   overflow: hidden;
+  .socialContenedor {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    block-size: 100%;
+    ::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: gray;
+
+      border-radius: 5px;
+    }
+  }
 `;
 
-function Social({ newBackgroundHeaderDark, newColorTextRed, setModal }) {
+function Social({
+  newBackgroundHeaderDark,
+
+  setModal,
+}) {
   return (
-    <SocialStyled path="/social">
-      <SaludoRedes newBackgroundHeaderDark={newBackgroundHeaderDark} />
-      <Correo setModal={setModal} />
-      <Redes />
+    <SocialStyled>
+      <div className="socialContenedor">
+        <SaludoRedes newBackgroundHeaderDark={newBackgroundHeaderDark} />
+        <Correo setModal={setModal} />
+        <Redes />
+      </div>
     </SocialStyled>
   );
 }
