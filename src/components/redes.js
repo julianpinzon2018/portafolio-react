@@ -102,23 +102,39 @@ function Redes() {
 
       <ul>
         <li>
-          <a href="https://github.com/julianpinzon2018">
-            <i className="fab fa-brands fa-github icon"></i>
+          <a
+            href="https://github.com/julianpinzon2018"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-brands fa-github icon" />
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/julanpinzon2018">
+          <a
+            href="https://twitter.com/julanpinzon2018"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-twitter icon"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/julianpinzon2018/">
-            <i className="fab fa-linkedin-in icon"></i>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/julianpinzon2018"
+            rel="noreferrer"
+          >
+            <i className="fab fa-brands fa-linkedin-in icon" />
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/julianpinzon2018/" target="blank">
-            <i className="fab fa-brands fa-instagram icon"></i>
+          <a
+            href="https://www.instagram.com/julianpinzon2018"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-brands fa-instagram icon" />
           </a>
         </li>
       </ul>
