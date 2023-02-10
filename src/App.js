@@ -7,6 +7,7 @@ import Profile from "./components/profile";
 import Skills from "./components/skills";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Modal from "./components/form";
 
 function App() {
   const backgroundDark = "#081b33";
@@ -22,8 +23,11 @@ function App() {
     useState(backgroundHeaderDark);
   const [newColorBotones, setColorBotones] = useState(colorBotones);
 
+  const [modal, setModal] = useState(false);
+
   return (
     <Layout newBackgroundDark={newBackgroundDark}>
+      <Modal isActive={modal} setModal={setModal} />
       <BrowserRouter>
         <Header
           setColor={setColor}
@@ -37,6 +41,7 @@ function App() {
           setColorTextRed={setColorTextRed}
           newColorTextRed={newColorTextRed}
         />
+
         <Routes>
           <Route
             path="/"
@@ -69,6 +74,7 @@ function App() {
             path="/social"
             element={
               <Social
+                setModal={setModal}
                 newBackgroundHeaderDark={newBackgroundHeaderDark}
                 newColorTextRed={newColorTextRed}
               />

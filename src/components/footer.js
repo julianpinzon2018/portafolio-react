@@ -20,6 +20,9 @@ const FooterStyled = styled.div`
     text-decoration: none;
     color: var(--main-white);
   }
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem;
+  }
 `;
 
 function Footer() {

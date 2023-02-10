@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const HeaderStyled = styled.div`
   grid-area: header;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +49,8 @@ const HeaderStyled = styled.div`
   }
 
   .contenIndices {
+    display: flex;
+    gap: 1rem;
     text-align: center;
     text-transform: uppercase;
   }
@@ -61,7 +64,6 @@ const HeaderStyled = styled.div`
   .indices {
     display: inline-block;
     list-style: outside none none;
-    margin: 1rem;
 
     padding: 0.3em 0.3em;
     color: rgba(255, 255, 255, 0.5);
@@ -103,6 +105,8 @@ const HeaderStyled = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    padding: 0.5rem;
+
     .contenIndices {
       display: flex;
       gap: 0.2rem;

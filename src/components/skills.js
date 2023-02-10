@@ -32,8 +32,6 @@ const SkillsStyled = styled.div`
     gap: 5rem;
     overflow-y: auto;
     overflow-x: hidden;
-
-    /* block-size: 100%; */
     inline-size: 80vw;
     padding-inline: 2rem;
     padding-block: 2rem;
