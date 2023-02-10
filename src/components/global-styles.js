@@ -14,6 +14,7 @@ const GlobalStylesStyled = createGlobalStyle`
   }
 body {
   font-family: Indie Flower;
+  margin: 0;
 }
 `;
 
