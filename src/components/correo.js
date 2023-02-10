@@ -1,3 +1,4 @@
+import { setIn } from "formik";
 import styled from "styled-components";
 
 const CorreoStyled = styled.div`
@@ -173,7 +174,9 @@ const CorreoStyled = styled.div`
 
 function Correo({ setModal }) {
   function handleClick() {
-    setModal(true);
+    setTimeout(() => {
+      setModal(true);
+    }, 300);
   }
   return (
     <CorreoStyled onClick={handleClick}>
