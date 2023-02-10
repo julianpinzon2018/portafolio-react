@@ -176,7 +176,7 @@ function Correo({ setModal }) {
   function handleClick() {
     setTimeout(() => {
       setModal(true);
-    }, 300);
+    }, 500);
   }
   return (
     <CorreoStyled onClick={handleClick}>
