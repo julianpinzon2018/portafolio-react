@@ -27,7 +27,7 @@ export default function Modal({ isActive, setModal }) {
   if (isActive) {
     return (
       <ModalPortal>
-        <Form setModal={setModal} />
+        <Form isActive={isActive} setModal={setModal} />
       </ModalPortal>
     );
   }
@@ -105,12 +105,15 @@ const Form = ({ setModal }) => {
           });
 
           if (response.ok) {
-            const formulario = document.getElementById("formu");
-            formulario.reset();
-            setModal(false);
-            setTimeout(() => {
-              alert("Thank you for contacting me, I will contact you soon!");
-            }, 300);
+            (async function () {
+              const formulario = document.getElementById("formu");
+              const reset = await formulario.reset();
+              const mo = await setModal(false);
+              setTimeout(() => {
+                alert("Thank you for contacting me, I will contact you soon!");
+              }, 100);
+              console.log(reset, mo);
+            })();
           }
         }}
       >
